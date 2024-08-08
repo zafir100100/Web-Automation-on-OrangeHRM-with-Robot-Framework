@@ -32,3 +32,8 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
     Go to ```TestSuites``` directory
 
     Then run the command: ```robot login.robot```
+
+## Automation Output Video:
+
+https://github.com/user-attachments/assets/ca90138f-af76-4f68-a42e-07e3bc2f54c1
+
