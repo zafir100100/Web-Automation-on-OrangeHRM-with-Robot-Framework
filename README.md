@@ -33,6 +33,12 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 
     Then run the command: ```robot login.robot```
 
+## Report:
+
+![image](https://github.com/user-attachments/assets/1d0adfe9-0b28-4b85-9d61-c7949f3407c0)
+
+![image](https://github.com/user-attachments/assets/e019038c-21c8-4f52-ba4b-c1fa33dd116a)
+
 ## Automation Output Video:
 
 https://github.com/user-attachments/assets/ca90138f-af76-4f68-a42e-07e3bc2f54c1
