@@ -21,17 +21,11 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 - Clone this project
 - First install dependencies:
 
-  ```pip install selenium```
+  ```pip install -r requirements.txt```
 
-  ```pip install robotframework```
+- Go to **TestSuites** directory and run:
 
-  ```pip install robotframework-seleniumlibrary```
-
-- Then run the test:
-
-    Go to ```TestSuites``` directory
-
-    Then run the command: ```robot login.robot```
+  ```robot login.robot```
 
 ## Report:
 
