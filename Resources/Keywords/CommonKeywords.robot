@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../Data/LoginData.robot
+Resource   ../PageObjects/LoginPageElements.robot
 
 *** Keywords ***
 Login With Credentials
@@ -14,3 +15,6 @@ Login With Credentials
 
 Error Message Apperance
     Wait Until Element Is Visible    ${INVALID_CREDENTIAL_TEXT}    10 seconds
+
+Login Button Disapperance
+    Wait Until Element Is Not Visible    ${LOGIN_BUTTON}    10 seconds
