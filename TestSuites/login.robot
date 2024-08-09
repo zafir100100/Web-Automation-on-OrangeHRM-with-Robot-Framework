@@ -1,23 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource   ../PageObjects/LoginPageElements.robot
+Resource   ../Resources/PageObjects/LoginPageElements.robot
+Resource   ../Resources/Keywords/LoginKeywords.robot
 
 *** Test Cases ***
 Invalid Login Test
     [Documentation]    Verify that a user cannot log in with invalid credentials
-    Open Browser    ${URL}    chrome
-    Maximize Browser Window
-    Wait Until Element Is Visible    ${USERNAME_INPUT}    10 seconds
-    Input Text    ${USERNAME_INPUT}    invalidUser
-    Input Text    ${PASSWORD_INPUT}    invalidPassword
+    Login With Credentials    invalidUser    invalidPassword
     [Teardown]    Close Browser
 
 Valid Login Test
     [Documentation]    Verify that a user can log in with valid credentials
-    Open Browser    ${URL}    chrome
-    Maximize Browser Window
-    Wait Until Element Is Visible    ${USERNAME_INPUT}    10 seconds
-    Input Text    ${USERNAME_INPUT}    admin
-    Input Text    ${PASSWORD_INPUT}    admin123
-    Click Button    ${LOGIN_BUTTON}
+    Login With Credentials    admin    admin123
     [Teardown]    Close Browser
