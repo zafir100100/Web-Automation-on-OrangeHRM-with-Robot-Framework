@@ -9,6 +9,7 @@ Invalid Login Test
     [Tags]  Login
     [Documentation]    Verify that a user cannot log in with invalid credentials
     Login With Credentials    ${USERNAME2}     ${PASSWORD1}
+    Error Message Apperance
     [Teardown]    Close Browser
 
 Valid Login Test

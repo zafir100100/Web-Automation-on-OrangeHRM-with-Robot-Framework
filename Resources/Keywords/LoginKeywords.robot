@@ -11,3 +11,6 @@ Login With Credentials
     Input Text    ${USERNAME_INPUT}    ${username}
     Input Text    ${PASSWORD_INPUT}    ${password}
     Click Button    ${LOGIN_BUTTON}
+
+Error Message Apperance
+    Wait Until Element Is Visible    ${INVALID_CREDENTIAL_TEXT}    10 seconds
