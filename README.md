@@ -14,7 +14,7 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 ## Technology used:
 - PyCharm
 - Robot framework
-- Python
+- Python 3.11
 
 ## How to run this project
 
