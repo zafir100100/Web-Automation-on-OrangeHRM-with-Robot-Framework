@@ -1,13 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
-
-*** Variables ***
-${URL}    https://example.com  # Replace with your actual URL
+Resource   ../Data/GlobalData.robot
+Resource   ../Data/LoginData.robot
 
 *** Keywords ***
 Login With Credentials
     [Arguments]    ${username}    ${password}
-    Open Browser    ${URL}    chrome
+    Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
     Wait Until Element Is Visible    ${USERNAME_INPUT}    10 seconds
     Input Text    ${USERNAME_INPUT}    ${username}
