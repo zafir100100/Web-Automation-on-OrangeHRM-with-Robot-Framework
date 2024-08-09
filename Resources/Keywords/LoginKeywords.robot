@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource   ../Data/GlobalData.robot
 Resource   ../Data/LoginData.robot
 
 *** Keywords ***
