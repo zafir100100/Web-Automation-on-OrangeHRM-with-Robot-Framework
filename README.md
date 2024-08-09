@@ -29,9 +29,9 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 
 ## Report:
 
-![image](https://github.com/user-attachments/assets/1d0adfe9-0b28-4b85-9d61-c7949f3407c0)
+![image](https://github.com/user-attachments/assets/904a8841-7c2a-4c14-8b19-efce0be832ea)
 
-![image](https://github.com/user-attachments/assets/e019038c-21c8-4f52-ba4b-c1fa33dd116a)
+![image](https://github.com/user-attachments/assets/91d61a91-20e9-4d72-99ee-b7a79461e809)
 
 ## Automation Output Video:
 
