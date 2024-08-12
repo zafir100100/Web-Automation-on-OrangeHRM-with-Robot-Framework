@@ -23,9 +23,13 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 
   ```pip install -r requirements.txt```
 
-- Go to **TestSuites** directory and run:
+- From project root directory double click:
 
-  ```robot login.robot```
+  ```runUI.bat``` (windows)
+  
+  Or you can run the file
+
+  ```runUI.sh``` (linux)
 
 ## Report:
 
