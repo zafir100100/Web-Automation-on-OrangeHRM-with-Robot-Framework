@@ -39,5 +39,5 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 
 ## Automation Output Video:
 
-https://github.com/user-attachments/assets/ca90138f-af76-4f68-a42e-07e3bc2f54c1
+https://github.com/user-attachments/assets/02512cd0-81f1-4ae1-a260-aa978c1377dc
 
