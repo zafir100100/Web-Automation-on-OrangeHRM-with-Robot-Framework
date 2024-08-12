@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource   ../Resources/PageObjects/LoginPageElements.robot
 Resource   ../Resources/Keywords/CommonKeywords.robot
 Resource   ../Resources/Data/LoginData.robot
 

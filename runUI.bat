@@ -7,9 +7,15 @@ ECHO Starting Automation Tests...
 :: INFO: To execute robot scripts locally
 call robot ^
   --outputdir Results ^
-    TestSuites/*.robot
+  --variable Environment:sandbox ^
+  --variable BROWSER:headlesschrome ^
+  --variable BROWSER_WIDTH:1440 ^
+  --variable BROWSER_HEIGHT:1024 ^
+  --loglevel TRACE ^
+  TestSuites/*.robot
 :: ---------------------------------------------------------------------------------------------------------------------
-:: INFO:  explanation
+:: INFO: Explanation of the command options used above
+::
 :: call robot ^: Calls the Robot Framework's robot command to start running the tests. The ^ character is used to break the command across multiple lines for readability.
 :: --outputdir NextGenIRIS/Results ^: Specifies where the test results should be saved.
 :: --variable Environment:sandbox ^: Sets the environment variable Environment to sandbox, which can alter the test behavior depending on the environment.
