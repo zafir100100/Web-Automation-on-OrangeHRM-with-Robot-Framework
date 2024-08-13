@@ -25,4 +25,5 @@ Verify employee creation functionality in PIM module
     Click On PIM Sidebar
     Create Employee   ${FIRST_NAME_1}     ${LAST_NAME_1}
     Validate Employee Name   ${FIRST_NAME_1}     ${LAST_NAME_1}
+    Capture Page Screenshot    ${SCREENSHOT_DIRECTORY}/Verify employee creation functionality in PIM module.png
     [Teardown]    Close Browser
