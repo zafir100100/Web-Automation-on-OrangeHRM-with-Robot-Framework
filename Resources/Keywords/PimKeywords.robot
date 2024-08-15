@@ -1,19 +1,20 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../PageObjects/PimPageElements.robot
-Resource   ../PageObjects/AddEmployeePageElements.robot
-Resource   ../PageObjects/EditEmployeePageElements.robot
-Resource   ../Keywords/CommonKeywords.robot
+Library     SeleniumLibrary
+Resource    ../PageObjects/PimPageElements.robot
+Resource    ../PageObjects/AddEmployeePageElements.robot
+Resource    ../PageObjects/EditEmployeePageElements.robot
+Resource    ../Keywords/CommonKeywords.robot
+
 
 *** Keywords ***
 Create Employee
     [Arguments]    ${first_name}    ${last_name}
-    Click On Element    ${EMPLOYEE_ADD_BUTTON}      Add Employee
+    Click On Element    ${EMPLOYEE_ADD_BUTTON}    Add Employee
     Enter Input Element    ${EMPLOYEE_FIRST_NAME_INPUT}    ${first_name}
     Enter Input Element    ${EMPLOYEE_LAST_NAME_INPUT}    ${last_name}
-    Click On Element    ${EMPLOYEE_SAVE_BUTTON}     Save
+    Click On Element    ${EMPLOYEE_SAVE_BUTTON}    Save
 
-Validate Employee Name
+Verify That Employee Name Is Present In The Employee List
     [Arguments]    ${first_name}    ${last_name}
     Wait Until Element Is Visible    ${EMPLOYEE_FIRST_NAME_INPUT}    10 seconds
     ${expected_value}=    Set Variable    ${first_name} ${last_name}
