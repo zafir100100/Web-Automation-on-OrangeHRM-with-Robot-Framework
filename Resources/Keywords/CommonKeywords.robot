@@ -9,8 +9,8 @@ Login With Credentials
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
     Wait Until Element Is Visible    ${USERNAME_INPUT}    10 seconds
-    Input Text    ${USERNAME_INPUT}    ${username}
-    Input Text    ${PASSWORD_INPUT}    ${password}
+    Enter Input Element    ${USERNAME_INPUT}    ${username}
+    Enter Input Element    ${PASSWORD_INPUT}    ${password}
     Click On Element    ${LOGIN_BUTTON}     Login
 
 Error Message Apperance
@@ -24,9 +24,9 @@ Enter Input Element
     [Arguments]    ${Element}    ${String}
     Wait Until Page Contains Element    ${Element}
     Wait Until Element Is Visible       ${Element}
-#    Element Should Be Enabled           ${Element}
+    Element Should Be Enabled           ${Element}
     Clear Input Element                 ${Element}
-    Enter Input Element                 ${Element}    ${String}
+    Input Text                          ${Element}    ${String}
 #    Highlight Element                   ${Element}
     Log To Console                      \nString :: ${String} Inserted Successfully!
 
