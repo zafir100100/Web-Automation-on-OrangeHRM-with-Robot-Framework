@@ -12,7 +12,7 @@ call robot ^
   --variable BROWSER_WIDTH:1440 ^
   --variable BROWSER_HEIGHT:1024 ^
   --loglevel TRACE ^
-  TestSuites/*.robot
+  TestCases/*.robot
 :: ---------------------------------------------------------------------------------------------------------------------
 :: INFO: Explanation of the command options used above
 ::
