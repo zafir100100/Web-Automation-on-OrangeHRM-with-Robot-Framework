@@ -296,3 +296,4 @@ selenium-screenshot-*.png
 /.idea
 *.iml
 /Results
+*.png
