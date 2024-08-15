@@ -8,11 +8,11 @@ Resource   ../PageObjects/EditEmployeePageElements.robot
 Create Employee
     [Arguments]    ${first_name}    ${last_name}
     Wait Until Element Is Visible    ${EMPLOYEE_ADD_BUTTON}    10 seconds
-    Click Element    ${EMPLOYEE_ADD_BUTTON}
+    Click On Element    ${EMPLOYEE_ADD_BUTTON}      Add Employee
     Wait Until Element Is Visible    ${EMPLOYEE_FIRST_NAME_INPUT}    10 seconds
     Input Text    ${EMPLOYEE_FIRST_NAME_INPUT}    ${first_name}
     Input Text    ${EMPLOYEE_LAST_NAME_INPUT}    ${last_name}
-    Click Button    ${EMPLOYEE_SAVE_BUTTON}
+    Click On Element    ${EMPLOYEE_SAVE_BUTTON}     Save
 
 Validate Employee Name
     [Arguments]    ${first_name}    ${last_name}
