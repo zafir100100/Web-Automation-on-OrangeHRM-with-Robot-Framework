@@ -20,6 +20,6 @@ Verify update own profile functionality in My Info module
     [Tags]    ui    regression    my_info
     Login With Credentials    ${USERNAME1}    ${PASSWORD1}
     Navigate To My Info Page
-    Update My Info    ${UPDATE_PROFILE_MIDDLE_NAME}
+    Update Profile Info    ${UPDATE_PROFILE_MIDDLE_NAME}
     Capture Page Screenshot    Verify update own profile functionality in My Info module.png
     [Teardown]    Close Browser
