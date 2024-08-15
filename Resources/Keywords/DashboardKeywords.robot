@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../PageObjects/DashboardPageElements.robot
+Resource   ../Keywords/CommonKeywords.robot
 
 *** Keywords ***
 Click On PIM Sidebar

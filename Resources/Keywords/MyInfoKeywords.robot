@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../PageObjects/MyInfoPageElements.robot
+Resource   ../Keywords/CommonKeywords.robot
 
 *** Keywords ***
 Update My Info

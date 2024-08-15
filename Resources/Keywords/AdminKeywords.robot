@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../PageObjects/UserManagementPageElements.robot
+Resource   ../Keywords/CommonKeywords.robot
 
 *** Keywords ***
 Search User
