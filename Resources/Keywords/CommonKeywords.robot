@@ -90,3 +90,21 @@ Verify Text Is Present In URL
     ${Current_URL}=    Get Location
     Should Contain    ${Current_URL}    ${Expected_Text}
     Log To Console    \n'${Expected_Text}' Is Present In URL -> Verified :: ${Current_URL}
+
+Get Text From Element
+    [Documentation]    This keyword helps to get a web element text.
+    [Arguments]    ${Element}
+    Wait Until Page Contains Element    ${Element}
+#    Highlight Element                   ${Element}
+    ${Text}=    Get Text    ${Element}
+    Log To Console    \nWeb Element Text :: ${Text}
+    RETURN    ${Text}
+
+Get Value From Element
+    [Documentation]    This keyword helps to get a web element value.
+    [Arguments]    ${Element}
+    Wait Until Page Contains Element    ${Element}
+#    Highlight Element                   ${Element}
+    ${Value}=    Get Value    ${Element}
+    Log To Console    \nWeb Element Value :: ${Value}
+    RETURN    ${Value}
