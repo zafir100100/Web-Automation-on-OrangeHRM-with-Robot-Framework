@@ -1,2 +1,2 @@
 *** Variables ***
-${UPDATE_PROFILE_MIDDLE_NAME}    test
+${UPDATE_PROFILE_MIDDLE_NAME}   test

@@ -70,6 +70,14 @@ Verify Element Text Is Present
 #    Highlight Element    ${Element}
     Log To Console    \nElement Text Is Present -> Verified :: Expected: ${Expected_Text} || Actual: ${Actual_Text}
 
+Verify Element Value Is Present
+    [Documentation]    This keyword helps to verify a web element text is present.
+    [Arguments]    ${Element}    ${Expected_Text}
+    ${Actual_Text}=    Get Value From Element    ${Element}
+    Should Be Equal As Strings    ${Actual_Text}    ${Expected_Text}
+#    Highlight Element    ${Element}
+    Log To Console    \nElement Value Is Present -> Verified :: Expected: ${Expected_Text} || Actual: ${Actual_Text}
+
 Verify Element Is Not Present
     [Documentation]    This keyword helps to verify a web element is not present.
     [Arguments]    ${Element}    ${Text}
