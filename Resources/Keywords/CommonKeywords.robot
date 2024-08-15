@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Resource   ../Data/LoginData.robot
 Resource   ../PageObjects/LoginPageElements.robot
+Resource   ../PageObjects/DashboardPageElements.robot
 
 *** Keywords ***
 Login With Credentials
@@ -12,13 +13,17 @@ Login With Credentials
     Enter Input Element    ${PASSWORD_INPUT}    ${password}
     Click On Element    ${LOGIN_BUTTON}     Login
 
-Error Message Apperance
+Verify That Failed Login Error Message Is Displayed
     Wait Until Page Contains Element    ${INVALID_CREDENTIAL_TEXT}
     Wait Until Element Is Visible       ${INVALID_CREDENTIAL_TEXT}
     Verify Element Text Is Present      ${INVALID_CREDENTIAL_TEXT}      Invalid credentials
 
-Login Button Disapperance
+Verify That After Successful Login Dashboard Page Is Displayed
     Verify Element Is Not Present       ${LOGIN_BUTTON}     Login
+    Verify Text Is Present In URL       dashboard
+    Wait Until Page Contains Element    ${DASHBOARD_SIDEBAR_TEXT}
+    Wait Until Element Is Visible       ${DASHBOARD_SIDEBAR_TEXT}
+    Verify Element Text Is Present      ${DASHBOARD_SIDEBAR_TEXT}      Dashboard
 
 Enter Input Element
     [Documentation]    This keyword helps to enter strings into an input field (editable).
@@ -71,3 +76,17 @@ Verify Element Is Not Present
     Wait Until Element Is Not Visible    ${Element}
     Page Should Not Contain              ${Element}
     Log To Console    \nElement Is Not Present -> Verified :: ${Text}
+
+Verify Element Is Present
+    [Documentation]    This keyword helps to verify a web element is present.
+    [Arguments]    ${Element}    ${Text}
+    Wait Until Element Is Visible    ${Element}
+    Page Should Contain              ${Element}
+    Log To Console    \nElement Is Present -> Verified :: ${Text}
+
+Verify Text Is Present In URL
+    [Documentation]    This keyword helps to verify that a specified text is present in the current URL.
+    [Arguments]    ${Expected_Text}
+    ${Current_URL}=    Get Location
+    Should Contain    ${Current_URL}    ${Expected_Text}
+    Log To Console    \n'${Expected_Text}' Is Present In URL -> Verified :: ${Current_URL}
