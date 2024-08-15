@@ -24,5 +24,5 @@ Verify user search functionality in Admin module
     Click On Admin Sidebar
     Search User    ${USERNAME1}
     Validate Username From User List   ${USERNAME1}
-    Capture Page Screenshot    ${SCREENSHOT_DIRECTORY}/Verify user search functionality in Admin module.png
+    Capture Page Screenshot    Verify user search functionality in Admin module.png
     [Teardown]    Close Browser

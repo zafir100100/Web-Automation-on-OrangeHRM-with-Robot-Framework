@@ -25,5 +25,5 @@ Verify update own profile functionality in My Info module
     Login Button Disapperance
     Click On My Info Sidebar
     Update My Info    ${UPDATE_PROFILE_MIDDLE_NAME}
-    Capture Page Screenshot    ${SCREENSHOT_DIRECTORY}/Verify update own profile functionality in My Info module.png
+    Capture Page Screenshot    Verify update own profile functionality in My Info module.png
     [Teardown]    Close Browser
