@@ -1,17 +1,18 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../PageObjects/DashboardPageElements.robot
-Resource   ../Keywords/CommonKeywords.robot
+Library     SeleniumLibrary
+Resource    ../PageObjects/DashboardPageElements.robot
+Resource    ../Keywords/CommonKeywords.robot
+
 
 *** Keywords ***
-Click On PIM Sidebar
+Navigate To PIM Page
     Wait Until Element Is Visible    ${PIM_SIDEBAR_TEXT}    10 seconds
-    Click On Element  ${PIM_SIDEBAR_TEXT}       PIM
+    Click On Element    ${PIM_SIDEBAR_TEXT}    PIM
 
-Click On Admin Sidebar
+Navigate To Admin Page
     Wait Until Element Is Visible    ${ADMIN_SIDEBAR_TEXT}    10 seconds
-    Click On Element  ${ADMIN_SIDEBAR_TEXT}     Admin
+    Click On Element    ${ADMIN_SIDEBAR_TEXT}    Admin
 
-Click On My Info Sidebar
+Navigate To My Info Page
     Wait Until Element Is Visible    ${MY_INFO_SIDEBAR_TEXT}    10 seconds
-    Click On Element  ${MY_INFO_SIDEBAR_TEXT}       My Info
+    Click On Element    ${MY_INFO_SIDEBAR_TEXT}    My Info
