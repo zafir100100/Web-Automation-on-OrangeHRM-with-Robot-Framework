@@ -19,4 +19,5 @@ Verify valid login functionality with correct credentials
     [Tags]          UI    Regression    Login
     [Documentation]     To verify that a user can log in with valid credentials.
     Login With Valid Credentials    ${USERNAME1}     ${PASSWORD1}
+    Log Out
     Capture Page Screenshot     Verify valid login functionality with correct credentials.png

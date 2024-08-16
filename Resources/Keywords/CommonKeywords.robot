@@ -16,15 +16,17 @@ Resource                ../Keywords/AdminKeywords.robot
 Resource                ../Keywords/DashboardKeywords.robot
 Resource                ../Keywords/MyInfoKeywords.robot
 Resource                ../Keywords/PimKeywords.robot
+Resource                ../Keywords/UserAccountOptionKeywords.robot
 
 # PAGE OBJECT LIBRARIES
 Resource                ../PageObjects/UserManagementPageElements.robot
 Resource                ../PageObjects/DashboardPageElements.robot
-Resource                ../PageObjects/LoginPageElements.robot
+Resource                ../PageObjects/LandingPageElements.robot
 Resource                ../PageObjects/MyInfoPageElements.robot
 Resource                ../PageObjects/PimPageElements.robot
 Resource                ../PageObjects/AddEmployeePageElements.robot
 Resource                ../PageObjects/EditEmployeePageElements.robot
+Resource                ../PageObjects/UserAccountOptionPageElements.robot
 
 *** Keywords ***
 Enter Input Element
@@ -52,6 +54,7 @@ Click On Element
     [Arguments]    ${Element}    ${Text}
     Wait Until Page Contains Element    ${Element}
     Wait Until Element Is Visible       ${Element}
+    Element Should Be Enabled           ${Element}
 #    Scroll                              ${Element}
 #    Highlight Element                   ${Element}
     Click Element                       ${Element}

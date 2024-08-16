@@ -16,4 +16,5 @@ Verify user search functionality in Admin module
     Navigate To Admin Page
     Search User    ${USERNAME1}
     Verify That User Exists In The Search Result    ${USERNAME1}
+    Log Out
     Capture Page Screenshot    Verify user search functionality in Admin module.png
