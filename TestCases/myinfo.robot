@@ -1,6 +1,10 @@
 *** Settings ***
 Documentation       This suite covers the functionalities related to profile information management within the My Info module of OrangeHRM.
 
+# SUITE LIBRARIES
+Suite Setup    Suite Startup
+Suite Teardown    Suite Shutdown
+
 # Selenium Web Automation Library
 Library             SeleniumLibrary
 # Data Resources
@@ -17,4 +21,3 @@ Verify update own profile functionality in My Info module
     Navigate To My Info Page
     Update Profile Info    ${UPDATE_PROFILE_MIDDLE_NAME}
     Capture Page Screenshot    Verify update own profile functionality in My Info module.png
-    [Teardown]    Close Browser

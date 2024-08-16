@@ -4,8 +4,6 @@ Resource   ../Keywords/CommonKeywords.robot
 *** Keywords ***
 Login With Credentials
     [Arguments]    ${username}    ${password}
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window
     Enter Input Element    ${USERNAME_INPUT}    ${username}
     Enter Input Element    ${PASSWORD_INPUT}    ${password}
     Click On Element    ${LOGIN_BUTTON}     Login

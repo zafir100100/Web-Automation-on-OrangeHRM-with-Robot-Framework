@@ -1,6 +1,10 @@
 *** Settings ***
 Documentation       This suite covers the functionalities related to the Admin module of OrangeHRM.
 
+# SUITE LIBRARIES
+Suite Setup    Suite Startup
+Suite Teardown    Suite Shutdown
+
 # Selenium Web Automation Library
 Library             SeleniumLibrary
 # Data Resources
@@ -18,4 +22,3 @@ Verify user search functionality in Admin module
     Search User    ${USERNAME1}
     Verify That User Exists In The Search Result    ${USERNAME1}
     Capture Page Screenshot    Verify user search functionality in Admin module.png
-    [Teardown]    Close Browser

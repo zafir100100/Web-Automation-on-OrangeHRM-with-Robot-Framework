@@ -1,6 +1,10 @@
 *** Settings ***
 Documentation    This suite covers the login functionality of the OrangeHRM application.
 
+# SUITE LIBRARIES
+Suite Setup    Suite Startup
+Suite Teardown    Suite Shutdown
+
 # Common Keywords Library
 Resource         ../Resources/Keywords/CommonKeywords.robot
 
@@ -11,7 +15,6 @@ Verify invalid login functionality with incorrect credentials
     Login With Credentials    ${USERNAME2}     ${PASSWORD1}
     Verify That Failed Login Error Message Is Displayed
     Capture Page Screenshot     Verify invalid login functionality with incorrect credentials.png
-    [Teardown]    Close Browser
 
 Verify valid login functionality with correct credentials
     [Tags]          UI    Regression    Login
@@ -19,4 +22,3 @@ Verify valid login functionality with correct credentials
     Login With Credentials    ${USERNAME1}     ${PASSWORD1}
     Verify That After Successful Login Dashboard Page Is Displayed
     Capture Page Screenshot     Verify valid login functionality with correct credentials.png
-    [Teardown]    Close Browser

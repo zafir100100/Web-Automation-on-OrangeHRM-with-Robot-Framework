@@ -1,6 +1,10 @@
 *** Settings ***
 Documentation       This suite covers the functionalities related to employee management within the PIM module of OrangeHRM.
 
+# SUITE LIBRARIES
+Suite Setup    Suite Startup
+Suite Teardown    Suite Shutdown
+
 # Selenium Web Automation Library
 Library             SeleniumLibrary
 # Data Resources
@@ -19,4 +23,3 @@ Verify employee creation functionality in PIM module
     Create Employee    ${FIRST_NAME_1}    ${LAST_NAME_1}
     Verify That Employee Name Is Present In Profile    ${FIRST_NAME_1}    ${LAST_NAME_1}
     Capture Page Screenshot    Verify employee creation functionality in PIM module.png
-    [Teardown]    Close Browser

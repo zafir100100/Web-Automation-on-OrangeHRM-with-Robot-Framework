@@ -115,3 +115,27 @@ Get Value From Element
     ${Value}=    Get Value    ${Element}
     Log To Console    \nWeb Element Value :: ${Value}
     RETURN    ${Value}
+
+Suite Startup
+    [Documentation]    This will run before every suite
+    Open Browser    ${URL}    ${BROWSER}
+    Log To Console    \nNavigating to the URL :: ${URL}
+    Log To Console    \nBrowser Name :: ${BROWSER}
+    Maximize Browser Window
+    Log To Console    \nMaximizing the Window.
+    # ${driver_path}=        Driver.getdriver    chrome
+    # Open Browser           https://pypi.org/project/webdriver-manager/    chrome    executable_path=${driver_path}
+    # Go to                  https://pypi.org/project/webdriver-manager/
+    # Close Browser
+
+    # open browser           ${url}    ${browser}
+    # log    Navigating to the URL: ${url}    console=yes
+    # log    Browser Name: ${browser} console=yes
+    # maximize browser window
+    # log    Maximizing the Window.    console=yes
+    # wait until element is visible    ${Prel_Logo}
+
+Suite Shutdown
+    [Documentation]    This will run after every suite
+    Close Browser
+    Log To Console    \nBrowser Closed.
