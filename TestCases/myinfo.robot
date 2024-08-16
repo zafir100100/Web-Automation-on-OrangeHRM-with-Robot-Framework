@@ -8,11 +8,6 @@ Resource            ../Resources/Data/LoginData.robot
 Resource            ../Resources/Data/UpdateProfileData.robot
 # Common Keywords Library
 Resource            ../Resources/Keywords/CommonKeywords.robot
-# Dashboard Keywords Library
-Resource            ../Resources/Keywords/DashboardKeywords.robot
-# My Info Keywords Library
-Resource            ../Resources/Keywords/MyInfoKeywords.robot
-
 
 *** Test Cases ***
 Verify update own profile functionality in My Info module

@@ -1,8 +1,4 @@
 *** Settings ***
-Library     SeleniumLibrary
-Resource    ../PageObjects/PimPageElements.robot
-Resource    ../PageObjects/AddEmployeePageElements.robot
-Resource    ../PageObjects/EditEmployeePageElements.robot
 Resource    ../Keywords/CommonKeywords.robot
 
 

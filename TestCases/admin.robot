@@ -7,10 +7,6 @@ Library             SeleniumLibrary
 Resource            ../Resources/Data/LoginData.robot
 # Common Keywords Library
 Resource            ../Resources/Keywords/CommonKeywords.robot
-# Dashboard Keywords Library
-Resource            ../Resources/Keywords/DashboardKeywords.robot
-# Admin Keywords Library
-Resource            ../Resources/Keywords/AdminKeywords.robot
 
 
 *** Test Cases ***

@@ -1,6 +1,27 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../Keywords/LoginKeywords.robot
+Documentation          This is a collection of various keywords of the application
+
+#SELENIUM WEB AUTOMATION LIBRARY
+Library                SeleniumLibrary
+
+# DATA RESOURCES
+Resource                ../Data/LoginData.robot
+
+# KEYWORD LIBRARIES
+Resource                ../Keywords/LoginKeywords.robot
+Resource                ../Keywords/AdminKeywords.robot
+Resource                ../Keywords/DashboardKeywords.robot
+Resource                ../Keywords/MyInfoKeywords.robot
+Resource                ../Keywords/PimKeywords.robot
+
+# PAGE OBJECT LIBRARIES
+Resource                ../PageObjects/UserManagementPageElements.robot
+Resource                ../PageObjects/DashboardPageElements.robot
+Resource                ../PageObjects/LoginPageElements.robot
+Resource                ../PageObjects/MyInfoPageElements.robot
+Resource                ../PageObjects/PimPageElements.robot
+Resource                ../PageObjects/AddEmployeePageElements.robot
+Resource                ../PageObjects/EditEmployeePageElements.robot
 
 *** Keywords ***
 Enter Input Element

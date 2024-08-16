@@ -1,12 +1,6 @@
 *** Settings ***
 Documentation    This suite covers the login functionality of the OrangeHRM application.
 
-# Selenium Web Automation Library
-Library          SeleniumLibrary
-
-# Data Resources
-Resource         ../Resources/Data/LoginData.robot
-
 # Common Keywords Library
 Resource         ../Resources/Keywords/CommonKeywords.robot
 

@@ -8,10 +8,6 @@ Resource            ../Resources/Data/LoginData.robot
 Resource            ../Resources/Data/CreateEmployeeData.robot
 # Common Keywords Library
 Resource            ../Resources/Keywords/CommonKeywords.robot
-# Dashboard Keywords Library
-Resource            ../Resources/Keywords/DashboardKeywords.robot
-# PIM Keywords Library
-Resource            ../Resources/Keywords/PimKeywords.robot
 
 
 *** Test Cases ***

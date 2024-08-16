@@ -1,8 +1,5 @@
 *** Settings ***
-Library     SeleniumLibrary
-Resource    ../PageObjects/DashboardPageElements.robot
 Resource    ../Keywords/CommonKeywords.robot
-
 
 *** Keywords ***
 Navigate To PIM Page
