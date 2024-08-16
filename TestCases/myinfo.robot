@@ -12,7 +12,7 @@ Resource            ../Resources/Keywords/CommonKeywords.robot
 Verify update own profile functionality in My Info module
     [Documentation]    To verify that a user can update this own profile in the My Info module.
     [Tags]    ui    regression    my_info
-    Login With Credentials    ${USERNAME1}    ${PASSWORD1}
+    Login With Valid Credentials    ${USERNAME1}    ${PASSWORD1}
     Navigate To My Info Page
     Update Profile Info    ${UPDATE_PROFILE_MIDDLE_NAME}
     Capture Page Screenshot    Verify update own profile functionality in My Info module.png

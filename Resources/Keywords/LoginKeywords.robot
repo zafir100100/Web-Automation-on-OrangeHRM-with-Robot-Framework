@@ -19,3 +19,17 @@ Verify That After Successful Login Dashboard Page Is Displayed
     Wait Until Page Contains Element    ${DASHBOARD_SIDEBAR_TEXT}
     Wait Until Element Is Visible       ${DASHBOARD_SIDEBAR_TEXT}
     Verify Element Text Is Present      ${DASHBOARD_SIDEBAR_TEXT}      Dashboard
+
+Login With Invalid Credentials
+    [Arguments]    ${username}    ${password}
+    Enter Input Element    ${USERNAME_INPUT}    ${username}
+    Enter Input Element    ${PASSWORD_INPUT}    ${password}
+    Click On Element    ${LOGIN_BUTTON}     Login
+    Verify That Failed Login Error Message Is Displayed
+
+Login With Valid Credentials
+    [Arguments]    ${username}    ${password}
+    Enter Input Element    ${USERNAME_INPUT}    ${username}
+    Enter Input Element    ${PASSWORD_INPUT}    ${password}
+    Click On Element    ${LOGIN_BUTTON}     Login
+    Verify That After Successful Login Dashboard Page Is Displayed
