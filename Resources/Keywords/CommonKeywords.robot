@@ -3,6 +3,7 @@ Documentation          This is a collection of various keywords of the applicati
 
 #SELENIUM WEB AUTOMATION LIBRARY
 Library                SeleniumLibrary
+Library                Screenshot
 
 # DATA RESOURCES
 Resource                ../Data/LoginData.robot
