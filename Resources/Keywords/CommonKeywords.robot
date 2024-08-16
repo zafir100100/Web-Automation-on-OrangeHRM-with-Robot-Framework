@@ -6,6 +6,9 @@ Library                SeleniumLibrary
 
 # DATA RESOURCES
 Resource                ../Data/LoginData.robot
+Resource                ../Data/UpdateProfileData.robot
+Resource                ../Data/GlobalData.robot
+Resource                ../Data/CreateEmployeeData.robot
 
 # KEYWORD LIBRARIES
 Resource                ../Keywords/LoginKeywords.robot

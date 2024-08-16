@@ -5,14 +5,8 @@ Documentation       This suite covers the functionalities related to employee ma
 Suite Setup    Suite Startup
 Suite Teardown    Suite Shutdown
 
-# Selenium Web Automation Library
-Library             SeleniumLibrary
-# Data Resources
-Resource            ../Resources/Data/LoginData.robot
-Resource            ../Resources/Data/CreateEmployeeData.robot
 # Common Keywords Library
 Resource            ../Resources/Keywords/CommonKeywords.robot
-
 
 *** Test Cases ***
 Verify employee creation functionality in PIM module

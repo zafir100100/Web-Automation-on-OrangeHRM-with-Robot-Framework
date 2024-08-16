@@ -5,13 +5,8 @@ Documentation       This suite covers the functionalities related to the Admin m
 Suite Setup    Suite Startup
 Suite Teardown    Suite Shutdown
 
-# Selenium Web Automation Library
-Library             SeleniumLibrary
-# Data Resources
-Resource            ../Resources/Data/LoginData.robot
 # Common Keywords Library
 Resource            ../Resources/Keywords/CommonKeywords.robot
-
 
 *** Test Cases ***
 Verify user search functionality in Admin module
