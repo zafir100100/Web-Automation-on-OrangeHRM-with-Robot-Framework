@@ -9,6 +9,7 @@ Create Employee
     Enter Input Element    ${EMPLOYEE_FIRST_NAME_INPUT}    ${first_name}
     Enter Input Element    ${EMPLOYEE_LAST_NAME_INPUT}    ${last_name}
     Click On Element    ${EMPLOYEE_SAVE_BUTTON}    Save
+    Verify That Employee Name Is Present In Profile    ${FIRST_NAME_1}    ${LAST_NAME_1}
 
 Verify That Employee Name Is Present In Profile
     [Arguments]    ${first_name}    ${last_name}

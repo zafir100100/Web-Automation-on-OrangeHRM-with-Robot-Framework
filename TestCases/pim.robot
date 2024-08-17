@@ -15,6 +15,5 @@ Verify employee creation functionality in PIM module
     Login With Valid Credentials    ${USERNAME1}    ${PASSWORD1}
     Navigate To PIM Page
     Create Employee    ${FIRST_NAME_1}    ${LAST_NAME_1}
-    Verify That Employee Name Is Present In Profile    ${FIRST_NAME_1}    ${LAST_NAME_1}
     Capture Page Screenshot
     Log Out
