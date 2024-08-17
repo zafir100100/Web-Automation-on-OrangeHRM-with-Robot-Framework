@@ -145,9 +145,9 @@ Suite Shutdown
     Close Browser
     Log To Console    \nBrowser Closed.
 
-#Wait until Element visibility succeeds
-#    [Arguments]    ${Locator}
-#    BuiltIn.wait until keyword succeeds    5x    20 seconds    Wait Until Element Is Visible    ${Locator}
+Wait until Element visibility succeeds
+    [Arguments]    ${Locator}
+    BuiltIn.wait until keyword succeeds    5x    20 seconds    Wait Until Element Is Visible    ${Locator}
 
 #Wait until Text visibility succeeds
 #    [Arguments]    ${Text}
