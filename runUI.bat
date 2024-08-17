@@ -12,6 +12,7 @@ call robot ^
   --variable BROWSER_WIDTH:1440 ^
   --variable BROWSER_HEIGHT:1024 ^
   --loglevel TRACE ^
+  --include Regression ^
   TestCases/*.robot
 :: ---------------------------------------------------------------------------------------------------------------------
 :: INFO: Explanation of the command options used above
