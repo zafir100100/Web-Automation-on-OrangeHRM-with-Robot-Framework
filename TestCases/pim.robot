@@ -11,7 +11,7 @@ Resource            ../Resources/Keywords/CommonKeywords.robot
 *** Test Cases ***
 Verify employee creation functionality in PIM module
     [Documentation]    To verify that an admin can create a new employee in the PIM module.
-    [Tags]    ui    regression    pim
+    [Tags]    UI    Regression    PIM
     Login With Valid Credentials    ${USERNAME1}    ${PASSWORD1}
     Navigate To PIM Page
     Create Employee    ${FIRST_NAME_1}    ${LAST_NAME_1}
