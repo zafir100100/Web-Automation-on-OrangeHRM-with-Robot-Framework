@@ -125,16 +125,19 @@ Get Value From Element
     RETURN    ${Value}
 
 Navigate To Landing Page
-    Go To    ${URL}
-    Log To Console    \nNavigating to the URL :: ${URL}
+    Go To    ${Base_Url}/web/index.php/auth/login
+    Log To Console    \nNavigating to the URL :: ${Base_Url}/web/index.php/auth/login
 
 Suite Startup
     [Documentation]    This will run before every suite
     Open Browser    about:blank     ${BROWSER}
     Log To Console    \nBrowser Opened.
     Log To Console    \nBrowser Name :: ${BROWSER}
-    Maximize Browser Window
-    Log To Console    \nMaximizing the Window.
+#    Maximize Browser Window
+#    Log To Console    \nMaximizing the Window.
+    Set Window Size    ${BROWSER_WIDTH}    ${BROWSER_HEIGHT}
+    Log To Console    \nSetting Window Size to Width: ${BROWSER_WIDTH} and Height: ${BROWSER_HEIGHT}.
+    Select API Environment    ${Environment}
     Navigate To Landing Page
     Wait Until Page Contains Element    ${OrangeHRM_Logo}
     Wait Until Element Is Visible    ${OrangeHRM_Logo}
