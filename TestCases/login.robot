@@ -13,11 +13,12 @@ Verify invalid login functionality with incorrect credentials
     [Tags]          UI    Regression    Login
     [Documentation]     To verify that the system displays an error message when invalid credentials are entered.
     Login With Invalid Credentials    ${USERNAME2}     ${PASSWORD1}
-    Capture Page Screenshot
+#    Capture Page Screenshot
+    Capture Screenshot
 
 Verify valid login functionality with correct credentials
     [Tags]          UI    Regression    Login
     [Documentation]     To verify that a user can log in with valid credentials.
     Login With Valid Credentials    ${USERNAME1}     ${PASSWORD1}
-    Capture Page Screenshot
+    Capture Screenshot
     Log Out
