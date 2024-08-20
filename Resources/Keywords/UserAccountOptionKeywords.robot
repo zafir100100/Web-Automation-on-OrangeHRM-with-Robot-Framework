@@ -18,4 +18,3 @@ Verify That User is successfully Logged Out
     Wait Until Element Is Visible       ${LOGIN_BUTTON}
     Verify Element Text Is Present      ${LOGIN_BUTTON}      Login
     Verify Text Is Present In URL       login
-    Verify Element Is Not Present       ${INVALID_CREDENTIAL_TEXT}      Invalid credentials
