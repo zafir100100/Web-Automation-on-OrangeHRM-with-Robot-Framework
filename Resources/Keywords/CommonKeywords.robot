@@ -110,6 +110,7 @@ Get Text From Element
     [Documentation]    This keyword helps to get a web element text.
     [Arguments]    ${Element}
     Wait Until Page Contains Element    ${Element}
+    Wait Until Element Is Visible       ${Element}
 #    Highlight Element                   ${Element}
     ${Text}=    Get Text    ${Element}
     Log To Console    \nWeb Element Text :: ${Text}
@@ -119,6 +120,7 @@ Get Value From Element
     [Documentation]    This keyword helps to get a web element value.
     [Arguments]    ${Element}
     Wait Until Page Contains Element    ${Element}
+    Wait Until Element Is Visible       ${Element}
 #    Highlight Element                   ${Element}
     ${Value}=    Get Value    ${Element}
     Log To Console    \nWeb Element Value :: ${Value}
