@@ -144,6 +144,8 @@ Suite Startup
     Wait Until Page Contains Element    ${OrangeHRM_Logo}
     Wait Until Element Is Visible    ${OrangeHRM_Logo}
     Log To Console    \nOrangeHRM Logo is Visible.
+    Set Selenium Implicit Wait    10s
+    Log To Console    \nSelenium Implicit Wait is Set to 10s.
 
 Suite Shutdown
     [Documentation]    This will run after every suite
