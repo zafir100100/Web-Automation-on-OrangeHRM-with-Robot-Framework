@@ -15,5 +15,5 @@ Verify update own profile functionality in My Info module
     Login With Valid Credentials    ${USERNAME1}    ${PASSWORD1}
     Navigate To My Info Page
     Update Profile Info    ${UPDATE_PROFILE_MIDDLE_NAME}
-    Capture Screenshot
+    Capture Page Screenshot
     Log Out

@@ -159,6 +159,3 @@ Wait until Element visibility succeeds
 Fluent Wait
     [Arguments]    ${Locator}
     BuiltIn.wait until keyword succeeds    10x    5 seconds    Wait Until Element Is Visible    ${Locator}
-
-Capture Screenshot
-    Capture Page Screenshot    ${TEST_NAME}.png
