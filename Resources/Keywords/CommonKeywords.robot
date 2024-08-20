@@ -62,7 +62,7 @@ Click On Element
     Click Element                       ${Element}
     Log To Console                      \nClicking On :: ${Text}
 
-Select API Environment
+Select Environment Variables
     [Arguments]    ${Environment}
     Set Global Variable    ${Environment}
     Run Keyword If    '${Environment}' == 'sandbox'    Set Suite Variable    ${Base_Url}    ${Base_Url_Sandbox}
@@ -77,13 +77,13 @@ Verify Element Text Is Present
 #    Highlight Element    ${Element}
     Log To Console    \nElement Text Is Present -> Verified :: Expected: ${Expected_Text} || Actual: ${Actual_Text}
 
-Verify Element Value Is Present
-    [Documentation]    This keyword helps to verify a web element text is present.
-    [Arguments]    ${Element}    ${Expected_Text}
-    ${Actual_Text}=    Get Value From Element    ${Element}
-    Should Be Equal As Strings    ${Actual_Text}    ${Expected_Text}
-#    Highlight Element    ${Element}
-    Log To Console    \nElement Value Is Present -> Verified :: Expected: ${Expected_Text} || Actual: ${Actual_Text}
+# Verify Element Value Is Present
+#     [Documentation]    This keyword helps to verify a web element text is present.
+#     [Arguments]    ${Element}    ${Expected_Text}
+#     ${Actual_Text}=    Get Value From Element    ${Element}
+#     Should Be Equal As Strings    ${Actual_Text}    ${Expected_Text}
+# #    Highlight Element    ${Element}
+#     Log To Console    \nElement Value Is Present -> Verified :: Expected: ${Expected_Text} || Actual: ${Actual_Text}
 
 Verify Element Is Not Present
     [Documentation]    This keyword helps to verify a web element is not present.
@@ -92,12 +92,12 @@ Verify Element Is Not Present
     Page Should Not Contain              ${Element}
     Log To Console    \nElement Is Not Present -> Verified :: ${Text}
 
-Verify Element Is Present
-    [Documentation]    This keyword helps to verify a web element is present.
-    [Arguments]    ${Element}    ${Text}
-    Wait Until Element Is Visible    ${Element}
-    Page Should Contain              ${Element}
-    Log To Console    \nElement Is Present -> Verified :: ${Text}
+# Verify Element Is Present
+#     [Documentation]    This keyword helps to verify a web element is present.
+#     [Arguments]    ${Element}    ${Text}
+#     Wait Until Element Is Visible    ${Element}
+#     Page Should Contain              ${Element}
+#     Log To Console    \nElement Is Present -> Verified :: ${Text}
 
 Verify Text Is Present In URL
     [Documentation]    This keyword helps to verify that a specified text is present in the current URL.
@@ -137,7 +137,7 @@ Suite Startup
 #    Log To Console    \nMaximizing the Window.
     Set Window Size    ${BROWSER_WIDTH}    ${BROWSER_HEIGHT}
     Log To Console    \nSetting Window Size to Width: ${BROWSER_WIDTH} and Height: ${BROWSER_HEIGHT}.
-    Select API Environment    ${Environment}
+    Select Environment Variables    ${Environment}
     Navigate To Landing Page
     Wait Until Page Contains Element    ${OrangeHRM_Logo}
     Wait Until Element Is Visible    ${OrangeHRM_Logo}
@@ -148,9 +148,9 @@ Suite Shutdown
     Close Browser
     Log To Console    \nBrowser Closed.
 
-Wait until Element visibility succeeds
-    [Arguments]    ${Locator}
-    BuiltIn.wait until keyword succeeds    5x    20 seconds    Wait Until Element Is Visible    ${Locator}
+# Wait until Element visibility succeeds
+#     [Arguments]    ${Locator}
+#     BuiltIn.wait until keyword succeeds    5x    20 seconds    Wait Until Element Is Visible    ${Locator}
 
 #Wait until Text visibility succeeds
 #    [Arguments]    ${Text}
