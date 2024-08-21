@@ -15,4 +15,4 @@ call pabot ^
   --variable BROWSER_HEIGHT:1024 ^
   --loglevel TRACE ^
   --include Regression ^
-  TestCases/*.robot
+  UI/TestCases/*.robot
