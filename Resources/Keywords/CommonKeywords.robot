@@ -92,12 +92,12 @@ Verify Element Is Not Present
     Page Should Not Contain              ${Element}
     Log To Console    \nElement Is Not Present -> Verified :: ${Text}
 
-# Verify Element Is Present
-#     [Documentation]    This keyword helps to verify a web element is present.
-#     [Arguments]    ${Element}    ${Text}
-#     Wait Until Element Is Visible    ${Element}
-#     Page Should Contain              ${Element}
-#     Log To Console    \nElement Is Present -> Verified :: ${Text}
+Verify Element Is Present
+    [Documentation]    This keyword helps to verify a web element is present.
+    [Arguments]    ${Element}    ${Text}
+    Wait Until Page Contains Element    ${Element}
+    Wait Until Element Is Visible    ${Element}
+    Log To Console    \nElement Is Present -> Verified :: ${Text}
 
 Verify Text Is Present In URL
     [Documentation]    This keyword helps to verify that a specified text is present in the current URL.
@@ -143,8 +143,7 @@ Suite Startup
     Log To Console    \nSetting Window Size to Width: ${BROWSER_WIDTH} and Height: ${BROWSER_HEIGHT}.
     Select Environment Variables    ${Environment}
     Navigate To Landing Page
-    Wait Until Page Contains Element    ${OrangeHRM_Logo}
-    Wait Until Element Is Visible    ${OrangeHRM_Logo}
+    Wait until Element visibility succeeds        ${OrangeHRM_Logo}
     Log To Console    \nOrangeHRM Logo is Visible.
 
 Suite Shutdown
@@ -152,9 +151,9 @@ Suite Shutdown
     Close Browser
     Log To Console    \nBrowser Closed.
 
-# Wait until Element visibility succeeds
-#     [Arguments]    ${Locator}
-#     BuiltIn.wait until keyword succeeds    5x    20 seconds    Wait Until Element Is Visible    ${Locator}
+Wait until Element visibility succeeds
+    [Arguments]    ${Locator}
+    BuiltIn.wait until keyword succeeds    5x    20 seconds    Wait Until Element Is Visible    ${Locator}
 
 #Wait until Text visibility succeeds
 #    [Arguments]    ${Text}
