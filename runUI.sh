@@ -9,4 +9,10 @@ echo "Starting Automation Tests..."
 # INFO: To execute robot scripts locally
 robot \
   --outputdir Results \
-  TestSuites/*.robot
+  --variable Environment:sandbox \
+  --variable BROWSER:headlesschrome \
+  --variable BROWSER_WIDTH:1440 \
+  --variable BROWSER_HEIGHT:1024 \
+  --loglevel TRACE \
+  --include Regression \
+  UI/TestCases/*.robot
