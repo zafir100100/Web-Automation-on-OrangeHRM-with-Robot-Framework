@@ -298,3 +298,4 @@ selenium-screenshot-*.png
 /Results
 *.png
 .pabotsuitenames
+/pabot_results
