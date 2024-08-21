@@ -31,11 +31,20 @@ Resource                ../PageObjects/EditEmployeePageElements.robot
 Resource                ../PageObjects/UserAccountOptionPageElements.robot
 
 *** Keywords ***
+Wait Until Element Is Ready
+    [Documentation]    This keyword waits until the element is present on the page and is visible.
+    [Arguments]    ${Element}
+    Wait Until Page Contains Element    ${Element}
+    Wait Until Element Is Visible       ${Element}
+    Wait Until Element Is Enabled       ${Element}
+    Log To Console                      \nElement Is Ready!
+
 Enter Input Element
     [Documentation]    This keyword helps to enter strings into an input field (editable).
     [Arguments]    ${Element}    ${String}
-    Wait Until Page Contains Element    ${Element}
-    Wait Until Element Is Visible       ${Element}
+#    Wait Until Page Contains Element    ${Element}
+#    Wait Until Element Is Visible       ${Element}
+    Wait Until Element Is Ready     ${Element}
     Element Should Be Enabled           ${Element}
     Clear Input Element                 ${Element}
     Input Text                          ${Element}    ${String}
@@ -45,8 +54,9 @@ Enter Input Element
 Clear Input Element
     [Documentation]    This keyword helps to clear strings from an input field (editable).
     [Arguments]    ${Element}
-    Wait Until Page Contains Element    ${Element}
-    Wait Until Element Is Visible       ${Element}
+#    Wait Until Page Contains Element    ${Element}
+#    Wait Until Element Is Visible       ${Element}
+    Wait Until Element Is Ready     ${Element}
 #    Highlight Element                   ${Element}
     Clear Element Text                  ${Element}
     Log To Console                      \nString Cleared Successfully!
@@ -54,8 +64,9 @@ Clear Input Element
 Click On Element
     [Documentation]    This keyword helps to click on an element.
     [Arguments]    ${Element}    ${Text}
-    Wait Until Page Contains Element    ${Element}
-    Wait Until Element Is Visible       ${Element}
+#    Wait Until Page Contains Element    ${Element}
+#    Wait Until Element Is Visible       ${Element}
+    Wait Until Element Is Ready     ${Element}
     Element Should Be Enabled           ${Element}
 #    Scroll                              ${Element}
 #    Highlight Element                   ${Element}
@@ -95,8 +106,9 @@ Verify Element Is Not Present
 Verify Element Is Present
     [Documentation]    This keyword helps to verify a web element is present.
     [Arguments]    ${Element}    ${Text}
-    Wait Until Page Contains Element    ${Element}
-    Wait Until Element Is Visible    ${Element}
+#    Wait Until Page Contains Element    ${Element}
+#    Wait Until Element Is Visible       ${Element}
+    Wait Until Element Is Ready     ${Element}
     Log To Console    \nElement Is Present -> Verified :: ${Text}
 
 Verify Text Is Present In URL
@@ -109,8 +121,9 @@ Verify Text Is Present In URL
 Get Text From Element
     [Documentation]    This keyword helps to get a web element text.
     [Arguments]    ${Element}
-    Wait Until Page Contains Element    ${Element}
-    Wait Until Element Is Visible       ${Element}
+#    Wait Until Page Contains Element    ${Element}
+#    Wait Until Element Is Visible       ${Element}
+    Wait Until Element Is Ready     ${Element}
 #    Highlight Element                   ${Element}
     ${Text}=    Get Text    ${Element}
     Log To Console    \nWeb Element Text :: ${Text}
@@ -119,8 +132,9 @@ Get Text From Element
 Get Value From Element
     [Documentation]    This keyword helps to get a web element value.
     [Arguments]    ${Element}
-    Wait Until Page Contains Element    ${Element}
-    Wait Until Element Is Visible       ${Element}
+#    Wait Until Page Contains Element    ${Element}
+#    Wait Until Element Is Visible       ${Element}
+    Wait Until Element Is Ready     ${Element}
 #    Highlight Element                   ${Element}
     ${Value}=    Get Value    ${Element}
     Log To Console    \nWeb Element Value :: ${Value}
