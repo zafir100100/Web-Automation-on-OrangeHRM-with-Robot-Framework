@@ -6,6 +6,7 @@ ECHO Starting Automation Tests...
 :: ---------------------------------------------------------------------------------------------------------------------
 :: INFO: To execute robot scripts locally
 call pabot ^
+  --verbose ^
   --testlevelsplit ^
   --processes 8 ^
   --outputdir Results ^
