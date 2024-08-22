@@ -7,7 +7,8 @@ ECHO Starting Automation Tests...
 :: INFO: To execute robot scripts locally
 call pabot ^
   --testlevelsplit ^
-  --processes 2 ^
+  --verbose ^
+  --processes 4 ^
   --outputdir Results ^
   --variable Environment:sandbox ^
   --variable BROWSER:headlesschrome ^

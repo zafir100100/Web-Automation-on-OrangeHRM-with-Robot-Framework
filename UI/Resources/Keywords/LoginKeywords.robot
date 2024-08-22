@@ -15,7 +15,6 @@ Click Login Button
 
 Login With Invalid Credentials
     [Arguments]    ${username}    ${password}
-    Check If Browser Is Open
     Enter Login Username    ${username}
     Enter Login Password    ${password}
     Click Login Button
@@ -23,7 +22,6 @@ Login With Invalid Credentials
 
 Login With Valid Credentials
     [Arguments]    ${username}    ${password}
-    Check If Browser Is Open
     Enter Login Username    ${username}
     Enter Login Password    ${password}
     Click Login Button
