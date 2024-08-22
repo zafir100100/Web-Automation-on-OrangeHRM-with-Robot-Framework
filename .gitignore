@@ -295,3 +295,7 @@ selenium-screenshot-*.png
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,python,robotframework
 /.idea
 *.iml
+/Results
+*.png
+.pabotsuitenames
+/pabot_results
