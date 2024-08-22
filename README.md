@@ -15,6 +15,7 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 - PyCharm
 - Robot framework
 - Python 3.11
+- pip
 
 ## How to run this project
 
@@ -33,11 +34,11 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 
 ## Report:
 
-![image](https://github.com/user-attachments/assets/904a8841-7c2a-4c14-8b19-efce0be832ea)
+![image](https://github.com/user-attachments/assets/96efa04d-6429-4786-9531-865622c86134)
 
-![image](https://github.com/user-attachments/assets/91d61a91-20e9-4d72-99ee-b7a79461e809)
+![image](https://github.com/user-attachments/assets/16c895b7-7158-46c1-92a8-b9c42277f719)
 
 ## Automation Output Video:
 
-https://github.com/user-attachments/assets/02512cd0-81f1-4ae1-a260-aa978c1377dc
+https://github.com/user-attachments/assets/646714b9-1057-41ec-88f2-f129a3eee923
 
