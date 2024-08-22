@@ -136,6 +136,11 @@ Suite Startup
     [Documentation]    This will run before every suite
     Set Selenium Implicit Wait    10s
     Log To Console    \nSelenium Implicit Wait is Set to 10s.
+    Select Environment Variables    ${Environment}
+    Log To Console    \nSelected Environment :: ${Environment}
+
+Test Startup
+    [Documentation]    This will run before every test case
     Open Browser    about:blank     ${BROWSER}
     Log To Console    \nBrowser Opened.
     Log To Console    \nBrowser Name :: ${BROWSER}
@@ -143,13 +148,12 @@ Suite Startup
 #    Log To Console    \nMaximizing the Window.
     Set Window Size    ${BROWSER_WIDTH}    ${BROWSER_HEIGHT}
     Log To Console    \nSetting Window Size to Width: ${BROWSER_WIDTH} and Height: ${BROWSER_HEIGHT}.
-    Select Environment Variables    ${Environment}
     Navigate To Landing Page
     Wait until Element visibility succeeds        ${OrangeHRM_Logo}
     Log To Console    \nOrangeHRM Logo is Visible.
 
-Suite Shutdown
-    [Documentation]    This will run after every suite
+Test Shutdown
+    [Documentation]    This will run after every test case
     Close Browser
     Log To Console    \nBrowser Closed.
 

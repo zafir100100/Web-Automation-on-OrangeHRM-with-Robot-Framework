@@ -3,7 +3,10 @@ Documentation       This suite covers the functionalities related to the Admin m
 
 # SUITE LIBRARIES
 Suite Setup    Suite Startup
-Suite Teardown    Suite Shutdown
+
+# TEST LIBRARIES
+Test Setup    Test Startup
+Test Teardown    Test Shutdown
 
 # Common Keywords Library
 Resource            ../Resources/Keywords/CommonKeywords.robot
