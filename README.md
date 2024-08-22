@@ -32,6 +32,10 @@ After executing tests, Robot Framework generates detailed and user-friendly repo
 
   ```runUI.sh``` (linux)
 
+## Test Cases (UI):
+
+![image](https://github.com/user-attachments/assets/0c5fb087-c010-4f6e-8a24-bcfd359f56e6)
+
 ## Report:
 
 ![image](https://github.com/user-attachments/assets/96efa04d-6429-4786-9531-865622c86134)
