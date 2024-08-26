@@ -11,7 +11,7 @@ Suite Setup         Suite Startup
 *** Test Cases ***
 GET All Posts With Empty Token
     [Documentation]    Verify if the GET request returns a list of all posts
-    [Tags]    api    regression    postapi
+    [Tags]    API    Regression    PostAPI
     Set Request Headers    ${Empty_Token}
     Create Request Session
     Request and Response    ${GET}    ${Posts_endPoint}    ${NO_PARAM}    ${Empty_Body}    ${SUCCESS}
@@ -19,7 +19,7 @@ GET All Posts With Empty Token
 
 GET All Posts With Invalid Token
     [Documentation]    Verify if the GET request returns a list of all posts
-    [Tags]    api    regression    postapi
+    [Tags]    API    Regression    PostAPI
     Set Request Headers    ${Invalid_Token}
     Create Request Session
     Request and Response    ${GET}    ${Posts_endPoint}    ${NO_PARAM}    ${Empty_Body}    ${SUCCESS}
@@ -27,7 +27,7 @@ GET All Posts With Invalid Token
 
 GET All Posts With Valid Token
     [Documentation]    Verify if the GET request returns a list of all posts
-    [Tags]    api    regression    postapi
+    [Tags]    API    Regression    PostAPI
     Set Request Headers    ${Valid_Token}
     Create Request Session
     Request and Response    ${GET}    ${Posts_endPoint}    ${NO_PARAM}    ${Empty_Body}    ${SUCCESS}
