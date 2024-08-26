@@ -62,39 +62,26 @@ Create Request Session
     Create Session    alias=${SESSION_NAME}    url=${Base_Url}    headers=${REQUEST_HEADERS}    disable_warnings=True
     Log To Console    \nRequest session created with base URL: ${base_url}
 
-# Create Request Session
-#    [Arguments]    ${base_url}    ${headers}
-#    ${SESSION_NAME}=    Set Test Variable    ${SESSION_NAME}
-#    Create Session    ${SESSION_NAME}    ${base_url}    headers=${headers}
-#    Log To Console    \nRequest session created with base URL: ${base_url}
-
 Request and Response
     [Arguments]    ${method}    ${url}    ${params}    ${data}    ${expected_status}
     IF    '${method}' == 'GET'
         ${RESPONSE}=    GET On Session    alias=${SESSION_NAME}    url=${url}    params=${params}    data=${data}    expected_status=${expected_status}
-#    ELSE IF    2 == 2
-#    Log    This line is NOT executed.
+    ELSE IF    '${method}' == 'POST'
+        ${RESPONSE}=    POST On Session    alias=${SESSION_NAME}    url=${url}    data=${data}    expected_status=${expected_status}
+    ELSE IF    '${method}' == 'PUT'
+        ${RESPONSE}=    PUT On Session    alias=${SESSION_NAME}    url=${url}    data=${data}    expected_status=${expected_status}
+    ELSE IF    '${method}' == 'DELETE'
+        ${RESPONSE}=    DELETE On Session    alias=${SESSION_NAME}    url=${url}    params=${params}    expected_status=${expected_status}
     ELSE
-        Log    Unsupported HTTP method: ${method}
+        Fail    Unsupported HTTP method: ${method}
     END
-    # GET    url=${url}    params=${params}    data=${data}    expected_status=${expected_status}
-#    Run Keyword If    '${method}' == 'GET'
-#    ...    ${RESPONSE}=    GET On Session    ${SESSION_NAME}    ${SESSION_NAME}    ${url}    ${params}
-#    ...    ELSE IF    '${method}' == 'POST'
-#    ...    ${RESPONSE}=    POST On Session    ${SESSION_NAME}    ${endpoint}    data=${body}
-#    ...    ELSE IF    '${method}' == 'PUT'
-#    ...    ${RESPONSE}=    PUT On Session    ${SESSION_NAME}    ${endpoint}    data=${body}
-#    ...    ELSE IF    '${method}' == 'DELETE'
-#    ...    ${RESPONSE}=    DELETE On Session    ${SESSION_NAME}    ${endpoint}    params=${param}
-#    ...    ELSE
-#    ...    Fail    Unsupported HTTP method: ${method}
-
-#    GET On Session    me
-
-    Log To Console    \nResponse received: ${RESPONSE.json()}
+#    ${pretty_response}=    Evaluate    json.dumps(${RESPONSE.json()}, indent=4)    json
+    Log To Console    \nResponse received:
+#    Log To Console    \n${pretty_response}
+    Log To Console    \n${RESPONSE}
 
 Verify Response Status
     [Arguments]    ${expected_status}    ${expected_message}
-    Should Be Equal As Strings    ${response.status_code}    ${expected_status}
-    Should Contain    ${response.json()}    ${expected_message}
-    Log To Console    \nStatus verification successful: ${response.status_code} - ${expected_message}
+    RequestsLibrary.Status Should Be    ${expected_status}
+    RequestsLibrary.Status Should Be    ${expected_message}
+    Log To Console    \nStatus verification successful: ${expected_status} - ${expected_message}

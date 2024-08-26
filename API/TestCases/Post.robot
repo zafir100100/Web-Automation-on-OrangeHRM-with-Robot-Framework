@@ -9,24 +9,13 @@ Suite Setup         Suite Startup
 
 
 *** Test Cases ***
-# GET All Posts
-#    [Tags]    API    Regression    PostAPI
-#    create session    mysession    ${base_url}
-#    ${response}=    get request    mysession    /todos/1
-#    log to console    ${response.status_code}
-#    log to console    ${response.json()}
-#    log to console    ${response.headers}
-
 GET All Posts
     [Documentation]    Verify if the GET request returns a list of all posts
     [Tags]    api    regression    postapi
     Set Request Headers    ${Empty_Token}
     Create Request Session
-#    ${response}=    GET On Session    ${SESSION_NAME}    ${Posts_endPoint}
     Request and Response    ${GET}    ${Posts_endPoint}    ${NO_PARAM}    ${Empty_Body}    ${SUCCESS}
-#    Log To Console    \n${response.status_code}
-#    Log To Console    \n${response.json()}
-#    Verify Status Code Is    ${response}    200
+    Verify Response Status    ${SUCCESS}    ${200 STATUS MESSAGE}
 
 # GET All Posts
 #    [Tags]    API    Regression    PostAPI
