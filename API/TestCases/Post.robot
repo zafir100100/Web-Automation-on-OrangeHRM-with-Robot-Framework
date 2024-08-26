@@ -38,7 +38,7 @@ GET Single Post
     [Tags]    API    Regression    PostAPI
     Set Request Headers    ${Valid_Token}
     Create Request Session
-    Request and Response    ${GET}    ${Posts_endPoint}/1    ${NO_PARAM}    ${Empty_Body}    ${SUCCESS}
+    Request and Response    ${GET}    ${Posts_endPoint}/${Valid_Post_Path_Variable}   ${NO_PARAM}    ${Empty_Body}    ${SUCCESS}
     Verify Response Status    ${SUCCESS}    ${200 STATUS MESSAGE}
 
 Create New Post
@@ -46,8 +46,8 @@ Create New Post
     [Documentation]    Verify if a POST request can create a new post
     Set Request Headers    ${Valid_Token}
     Create Request Session
-    ${data}=    Create Dictionary    title=foo    body=bar    userId=1
-    Request and Response    ${POST}    ${Posts_endPoint}    ${NO_PARAM}    ${data}    ${CREATED}
+#    ${data}=    Create Dictionary    title=foo    body=bar    userId=1
+    Request and Response    ${POST}    ${Posts_endPoint}    ${NO_PARAM}    ${New_Post_Data}    ${CREATED}
     Verify Response Status    ${CREATED}    ${201 STATUS MESSAGE}
 
 Update Post
@@ -55,8 +55,8 @@ Update Post
     [Documentation]    Verify if a PUT request can update an existing post
     Set Request Headers    ${Valid_Token}
     Create Request Session
-    ${data}=    Create Dictionary    id=1    title=foo    body=bar    userId=1
-    Request and Response    ${PUT}    ${Posts_endPoint}/1    ${NO_PARAM}    ${data}    ${SUCCESS}
+#    ${data}=    Create Dictionary    id=1    title=foo    body=bar    userId=1
+    Request and Response    ${PUT}    ${Posts_endPoint}/${Valid_Post_Path_Variable}    ${NO_PARAM}    ${Update_Post_Data}    ${SUCCESS}
     Verify Response Status    ${SUCCESS}    ${200 STATUS MESSAGE}
 
 DELETE Post
@@ -64,5 +64,5 @@ DELETE Post
     [Documentation]    Verify if a DELETE request can remove a post by ID
     Set Request Headers    ${Valid_Token}
     Create Request Session
-    Request and Response    ${DELETE}    ${Posts_endPoint}/1    ${NO_PARAM}    ${Empty_Body}    ${SUCCESS}
+    Request and Response    ${DELETE}    ${Posts_endPoint}/${Valid_Post_Path_Variable}    ${NO_PARAM}    ${Empty_Body}    ${SUCCESS}
     Verify Response Status    ${SUCCESS}    ${200 STATUS MESSAGE}

@@ -4,8 +4,11 @@ Documentation       This is a collection of various keywords of the application
 # LIBRARY
 Library             RequestsLibrary
 Library             Collections
+
 # DATA RESOURCES
 Resource            ../Data/GlobalData.robot
+Resource            ../Data/PostData.robot
+
 # KEYWORD LIBRARIES
 Resource            ../Keywords/PostKeywords.robot
 
