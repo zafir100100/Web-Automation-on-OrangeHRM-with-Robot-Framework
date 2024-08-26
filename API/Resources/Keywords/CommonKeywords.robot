@@ -28,30 +28,6 @@ Select Environment Variables
 Suite StartUp
     [Documentation]    This will run before every suite
     Select Environment Variables    ${Environment}
-#    Set Request Headers    ${Environment}
-#    Create Request Session    ${Base_Url}
-
-# Create Request Session
-#    [Documentation]    This keyword creates a session on the given base URL
-#    [Arguments]    ${url}
-#    Create Session    mysession    ${url}
-#    Log To Console    \nSession Successfully Initialized With The Base URL :: ${url}
-
-# Set Request Headers
-#    [Documentation]    This keyword sets request headers.
-#    [Arguments]    ${token}
-#    ${headers}=    Create Dictionary    Content-Type=application/json    Authorization=${token}
-#    Log To Console    \nRequest headers created.
-#    [Return]    ${headers}
-
-# Verify Status Code Is
-#    [Documentation]    This keyword helps to verify that the HTTP response status code is as expected.
-#    [Arguments]    ${response}    ${expected_status}
-#    ${actual_status}=    Get From Dictionary    ${response}    status_code
-#    Log To Console    \nThis is status code\n
-#    Log To Console    ${actual_status}
-#    Should Be Equal As Numbers    ${actual_status}    ${expected_status}    \nError: Expected status code was ${expected_status}, but got ${actual_status}
-#    Log To Console    \nStatus Code Is Present -> Verified :: Expected: ${expected_status} || Actual: ${actual_status}
 
 Set Request Headers
     [Arguments]    ${token}
